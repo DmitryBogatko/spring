@@ -1,0 +1,12 @@
+CREATE USER bookmanager@localhost identified BY '123123';
+GRANT USAGE ON *.* TO bookmanager@localhost identified BY '123123';
+CREATE DATABASE IF NOT EXISTS bookmanager;
+GRANT ALL PRIVILEGES ON bookmanager.* TO bookmanager@localhost;
+use bookmanager;
+CREATE TABLE books
+(
+    id		INT PRIMARY KEY AUTO_INCREMENT,
+    name	VARCHAR(50),
+    genre	VARCHAR(50),
+    created	TIMESTAMP DEFAULT NOW()
+);
