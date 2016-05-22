@@ -4,7 +4,7 @@
 
 <t:template>
     <c:if test = "${!empty books}">
-        <table class ="book-list-table">
+        <table class ="book-list-table table table-hover table-striped">
             <tr>
                 <th>Name</th>
                 <th>Genre</th>
@@ -18,7 +18,7 @@
                     <td>${book.name}</td>
                     <td>${book.genre}</td>
                     <sec:authorize access="hasRole('admin')">
-                        <td><a href="javascript:BookUtil.deleteBook(${book.id})">Delete</a></td>
+                        <td><a class="btn btn-danger btn-xs" href="javascript:BookUtil.deleteBook(${book.id})">X</a></td>
                     </sec:authorize>
 
                 </tr>

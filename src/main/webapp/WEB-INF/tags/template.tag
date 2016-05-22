@@ -7,7 +7,9 @@
 <html>
     <head>
         <link href="<c:url value="/resources/css/main.css" />" rel="stylesheet">
+        <link href="<c:url value="/resources/css/bootstrap.min.css" />" rel="stylesheet">
         <script src="<c:url value="/resources/script/bookUtil.js" />"></script>
+
         <title>Book Manager</title>
 
     </head>
@@ -18,11 +20,11 @@
             <div class="login-link-container">
                 <sec:authorize access="isAnonymous()">
                     <p>
-                        <a href="/j_spring_security_check">Sign In</a>
+                        <a class="btn btn-primary" href="/j_spring_security_check">Sign In</a>
                     </p>
                 </sec:authorize>
                 <sec:authorize access="isAuthenticated()">
-                    <a href="/j_spring_security_logout">Sign Out</a>
+                    <a class="btn btn-default" href="/j_spring_security_logout">Sign Out</a>
                 </sec:authorize>
             </div>
 
